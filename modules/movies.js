@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../database.js';
 
-export const Movie = sequelize.define('Movie', {
+export const Movies = sequelize.define('Movies', {
   title: {
     type: DataTypes.STRING,
     allowNull: false

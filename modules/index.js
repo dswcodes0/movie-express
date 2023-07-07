@@ -1,6 +1,7 @@
-import { Movie } from './movies';
-import { User } from './users';
+import { Movies } from './movies.js';
+import { Users } from './users.js';
 
+Users.hasMany(Movies, { as: 'movies', foreignKey: 'userId' });
+Movies.belongsTo(Users, { as: 'users', foreignKey: 'userId' });
 
-
-export { Movie, User };
+export { Movies, Users }; 

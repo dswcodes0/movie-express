@@ -1,6 +1,6 @@
 import express from 'express';
 import { sequelize } from './database.js';
-import { User, Post } from './models/index.js';
+import { User, Post } from './modules/index.js';
 
 const app = express();
 

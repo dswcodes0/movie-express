@@ -2,14 +2,14 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { Users, Movies } from './models/index.js';
+import { Users, Movies } from './modules/index.js';
 import { sequelize } from './database.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const userData = JSON.parse(fs.readFileSync(path.resolve(__dirname, './seeders/user.json'), 'utf8'));
-const movieData = JSON.parse(fs.readFileSync(path.resolve(__dirname, './seeders/movie.json'), 'utf8'));
+const userData = JSON.parse(fs.readFileSync(path.resolve(__dirname, './seeders/users.json'), 'utf8'));
+const movieData = JSON.parse(fs.readFileSync(path.resolve(__dirname, './seeders/movies.json'), 'utf8'));
 
 const seedDatabase = async () => {
   try {
