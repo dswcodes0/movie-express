@@ -1,5 +1,5 @@
-import { Movie } from './movie';
-import { User } from './user';
+import { Movie } from './movies';
+import { User } from './users';
 
 
 
